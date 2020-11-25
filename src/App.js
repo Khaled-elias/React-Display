@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Display from './components/Display';
+import Rechnen from './components/Rechnen';
+import Display3 from './components/Display3';
+import info from "./data/REACT.json"
+import Display4 from './components/Display4';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Display /> */}
+      {/* <Rechnen /> */}
+      
+      {info.map((info, i) => <Display3 key={i} info={info} />)}
+      
+     
+
     </div>
   );
 }
